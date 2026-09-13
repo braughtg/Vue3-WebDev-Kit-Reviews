@@ -1,11 +1,11 @@
 ---
-applyTo: 'web-projects/flashword/**/*'
+applyTo: 'web-projects/flashword-vite/**/*'
 description: Review Criteria for Extension 04 - Vue3
 ---
 
 - Read the pull request body.
 - If the "Type of Work" is Extension and the "Topic" is "04 - Vue 3" then apply the criterion below for this review. Otherwise do not apply this criteria in your review.
-- Review web-projects/flashword/index.html and web-projects/flashword/app.js checking for the content in the following sections:
+- Review web-projects/flashword-vite/App.vue checking for the content in the following sections:
 
 ## Workflow
 
