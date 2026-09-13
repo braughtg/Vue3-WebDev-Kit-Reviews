@@ -33,5 +33,5 @@ Post exactly one review comment on the open pull request with no introduction, c
 
 - Add one level-2 heading for every second-level heading in the selected criteria file, preserving the same order and never omitting a section, including sections whose requirements all fail or all pass.
 - Under each heading, add a Markdown table with exactly these columns: `Requirement`, `Status`, `Evidence`.
-- Add exactly one row for each Primary Requirement in that section: every applicable top-level bullet must have its own distinct row, in the same order as the criteria file. Never combine multiple Primary Requirements into one row, even when they concern the same file or feature; nested bullets belong in the evidence and status for their parent row.
+- Add exactly one row for each Primary Requirement in that section: every applicable top-level bullet must have its own distinct row, in the same order as the criteria file. Never combine multiple Primary Requirements into one row, even when they concern the same file or feature; nested bullets give secondary requirements and should never have their own row, they belong in the evidence and status for their parent row.
 - Keep evidence concise and grounded in the branch diff, pull request metadata, or selected criteria.
