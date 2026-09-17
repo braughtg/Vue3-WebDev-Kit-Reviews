@@ -28,6 +28,8 @@ description: Review Criteria for Extension 04 - Vue3
   - The computed property should compute its answer based on the `correct` property of the entries in `data.words`,
   - There should not be a `data` property named `correctCount`.
   - The `checkAnswer` method should not modify `correctCount`.
+- At least one of the commits in the pull request contains an `Assisted-by:` trailer acknowledging the use of an AI model or tool as required by the workflow.
+- The pull request has at least one comment containing a log of the author's interaction with GitHub Copilot as required by the workflow. This comment can be identified because it contains a top level heading of "Copilot Chat Log" and a hash hidden in an HTML comment.
 
 ## Optional Extensions
 
