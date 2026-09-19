@@ -31,7 +31,8 @@ description: Review Criteria for Extension 05 - Vue4
 - The functionality that displays the score or completion message is contained in a component.
   - The component that displays the score or completion message is used in `App.vue`.
 - The component that displays the score or completion message also displays a progress bar that indicates the progress toward completion of the game.
-- At least one of the commits in the pull request contains an `Assisted-by:` trailer acknowledging the use of an AI model or tool as required by the workflow.
+- The pull request contains `Assisted-by:` trailers acknowledging the use of an AI model or tool as required by the workflow.
+  - There should be 3 `Assisted-by:` trailers, one for each commit for an extension with AI.
 - The pull request has at least one comment containing a log of the author's interaction with GitHub Copilot as required by the workflow. This comment can be identified because it contains a top level heading of "Copilot Chat Log" and a hash hidden in an HTML comment.
 
 ## AI Reflection
