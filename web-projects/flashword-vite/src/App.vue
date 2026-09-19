@@ -10,17 +10,17 @@ export default {
       words: [
         {
           spanish: 'hola',
-          word_b: 'hello',
+          english: 'hello',
           hint: 'greeting',
         },
         {
           spanish: 'uno',
-          word_b: 'one',
+          english: 'one',
           hint: 'number',
         },
         {
           spanish: 'gris',
-          word_b: 'grey',
+          english: 'grey',
           hint: 'color',
         },
       ],
