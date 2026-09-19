@@ -5,6 +5,7 @@ export default {
     word: {
       type: Object,
       required: true,
+      hint: false,
     },
   },
   emits: ['incrementCorrectCount'],
@@ -12,6 +13,7 @@ export default {
     return {
       correct: false,
       answer: '',
+      showHint: false,
     };
   },
   methods: {
@@ -36,6 +38,12 @@ export default {
       v-on:keyup.enter="checkAnswer()"
     />
     <p v-else class="correctAnswer">{{ answer }}</p>
+
+    <div v-show="!correct">
+      <label for="showHint">Hint? </label>
+      <input type="checkbox" id="showHint" v-model="showHint" />
+      <span v-show="showHint"> {{ word.hint }}</span>
+    </div>
   </div>
 </template>
 
