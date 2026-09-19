@@ -25,6 +25,12 @@ export default {
   <p v-else id="correctCount">
     You have answered {{ correctCount }} out of {{ wordCount }}
   </p>
+  <progress
+    id="progress"
+    v-bind:value="correctCount"
+    v-bind:max="wordCount"
+    aria-label="Game progress"
+  ></progress>
 </template>
 
 <style scoped>
@@ -41,5 +47,12 @@ export default {
   color: #0f5132;
   padding: 10px;
   margin: 10px;
+}
+
+#progress {
+  display: block;
+  width: min(90%, 600px);
+  height: 16px;
+  margin: 0 auto 20px;
 }
 </style>
