@@ -9,17 +9,17 @@ export default {
     return {
       words: [
         {
-          word_a: 'hola',
+          spanish: 'hola',
           word_b: 'hello',
           hint: 'greeting',
         },
         {
-          word_a: 'uno',
+          spanish: 'uno',
           word_b: 'one',
           hint: 'number',
         },
         {
-          word_a: 'gris',
+          spanish: 'gris',
           word_b: 'grey',
           hint: 'color',
         },
@@ -63,7 +63,7 @@ export default {
     <div id="cards">
       <WordCard
         v-for="word in shuffledWords"
-        v-bind:key="word.word_a"
+        v-bind:key="word.spanish"
         v-bind:word="word"
         v-on:incrementCorrectCount="incrementCorrectCount"
       >
