@@ -11,12 +11,12 @@ description: Review Criteria for Tutorial 06 - Cypress
 ## Workflow
 
 - The pull request contains at least four commits.
-- The commit messages briefly describe the changes made in the commit.
+  - The commit messages briefly describe the changes made in the commit.
 
 ## Installing and Running Cypress
 
 - The `web-projects/flashword-vite/package.json` file lists Cypress as a development dependency.
-- The `web-projects/flashword-vite` directory contains the `cypress directory` and a `cypress.cy.js` configuration file.
+- The `web-projects/flashword-vite` directory contains the `cypress directory` and a `cypress.config.js` configuration file.
 
 ## Your First Cypress Test
 
@@ -40,5 +40,6 @@ description: Review Criteria for Tutorial 06 - Cypress
   - All `cy.get` statements in the `it` use `data-cy` properties to find elements.
   - The `it` tests that the header contains `FlashWord`.
   - The `it` tests that the message "You have answered 0 out of 3" is displayed.
+  - The `it` tests that the message "Great work, you have completed all the words!" is not displayed.
 
 - If you applied this criteria, skip all other path specific instructions.
