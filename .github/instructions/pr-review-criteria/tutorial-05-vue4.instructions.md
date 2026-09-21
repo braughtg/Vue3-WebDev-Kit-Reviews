@@ -6,7 +6,7 @@ description: Review Criteria for Tutorial 05 - Vue 4
 - Read the pull request body.
 - If the "Type of Work" is Tutorial and the "Topic" is "05 - Vue4" then apply the criterion below for this review. Otherwise do not apply this criteria in your review.
 - Allow for small variances in variable, attribute and method names.
-- Review web-projects/flashword-vite/src/App.vue checking for the content in the following sections:
+- Review web-projects/flashword-vite/src/App.vue and web-projects/flashword-vite/src/components/*.vue checking for the content in the following sections:
 
 ## Workflow
 
