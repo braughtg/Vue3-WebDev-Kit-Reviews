@@ -4,7 +4,7 @@ description: Review Criteria for Tutorial 06 - Cypress
 ---
 
 - Read the pull request body.
-- If the "Type of Work" is Tutorial and the "Topic" is "05 - Vue4" then apply the criterion below for this review. Otherwise do not apply this criteria in your review.
+- If the "Type of Work" is Tutorial and the "Topic" is "06 - Cypress" then apply the criterion below for this review. Otherwise do not apply this criteria in your review.
 - Allow for small variances in variable, attribute and method names.
 - Review web-projects/flashword-vite/src/App.vue, web-projects/flashword-vite/src/components/_.vue and web-projects/cypress/e2e/_.cy.js checking for the content in the following sections:
 
