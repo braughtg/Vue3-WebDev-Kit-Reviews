@@ -51,6 +51,13 @@ description: Review Criteria for Tutorial 06 - Cypress
 
 ## Using the Elements in Components in a Test
 
-- The `it` that tests the `WordCard` elements checks the
+- The `web-projects/flashword-vite/components/WordCard.vue` file applies `data-cy` attributes with descriptive values to the elements used in the tests in `flashword.cy.js`.
+  - The `p` element displaying the word to be translated has a `data-cy` with a descriptive value.
+  - The `input` element where the user types the translation has a `data-cy` with a descriptive value.
+- The `it` in `flashword.cy.js` that tests the `WordCard` elements also checks elements inside of the `WordCard` component.
+  - All `cy.get` statements in the `it` use `data-cy` properties to find elements.
+  - All elements inside of the `WordCard` components are found by chaining calls to `.find` that use `data-cy` properties to find the element.
+  - The `it` tests that the `WordCard`s for `hola`, `uno` and `gris` display the correct word.
+  - The `it` tests that the answer text field for the translation in the `WordCard`s for `hola`, `uno` and `gris` are empty.
 
 - If you applied this criteria, skip all other path specific instructions.
