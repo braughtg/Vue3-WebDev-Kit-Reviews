@@ -29,7 +29,7 @@ description: Review Criteria for Tutorial 06 - Cypress
   - It types text into an element with the CSS class `.action-email`.
   - It verifies that the element with the CSS class `.action-email` contains the typed text.
 
-## Cypress Tests for Flashword
+## Cypress Tests for Flashword with `data-cy`
 
 - The `web-projects/flashword-vite/App.vue` file applies `data-cy` attributes to the elements used in the test for the initial page state.
   - The `h2` containing `FlashWord` has a `data-cy` attribute.
@@ -40,6 +40,13 @@ description: Review Criteria for Tutorial 06 - Cypress
   - All `cy.get` statements in the `it` use `data-cy` properties to find elements.
   - The `it` tests that the header contains `FlashWord`.
   - The `it` tests that the message "You have answered 0 out of 3" is displayed.
-  - The `it` tests that the message "Great work, you have completed all the words!" is not displayed.
+
+## Using `data-cy` with `v-for`
+
+- The `web-projects/flashword-vite/App.vue` file applies a `data-cy` attribute with a unique value to each of the `WordCard` elements created.
+- The `describe` block in `flashword.cy.js` contains an `it` that tests the `WordCard` elements.
+  - All `cy.get` statements in the `it` use `data-cy` properties to find elements.
+  - The `it` tests that the `WordCard`s for `hola`, `uno` and `gris` are visible.
+  - The `it` tests that the `WordCard`s for `hola`, `uno` and `gris` do not have the CSS style `correct`.
 
 - If you applied this criteria, skip all other path specific instructions.
