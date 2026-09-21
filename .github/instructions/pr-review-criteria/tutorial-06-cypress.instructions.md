@@ -11,7 +11,7 @@ description: Review Criteria for Tutorial 06 - Cypress
 ## Workflow
 
 - The pull request contains at least four commits.
-  - The commit messages briefly describe the changes made in the commit. Omit commit messages about merging `main` from consideration.
+  - The commit messages briefly describe the changes made in the commit. Messages about merging `main` branch should be considered descriptive.
 
 ## Installing and Running Cypress
 
@@ -48,5 +48,9 @@ description: Review Criteria for Tutorial 06 - Cypress
   - All `cy.get` statements in the `it` use `data-cy` properties to find elements.
   - The `it` tests that the `WordCard`s for `hola`, `uno` and `gris` are visible.
   - The `it` tests that the `WordCard`s for `hola`, `uno` and `gris` do not have the CSS class `correct`.
+
+## Using the Elements in Components in a Test
+
+- The `it` that tests the `WordCard` elements checks the
 
 - If you applied this criteria, skip all other path specific instructions.
