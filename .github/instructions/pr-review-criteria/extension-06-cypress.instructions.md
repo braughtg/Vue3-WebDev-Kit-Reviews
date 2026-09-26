@@ -38,7 +38,7 @@ description: Review Criteria for Extension 06 - Cypress
   - `data-cy` attributes are used to `get` all elements that the `it` uses.
   - `find` is used to find the `text` element within the `WordCard` component.
   - `type` is used to type a word and the `{enter}` key into the `text` element.
-  - a `should` uses the `has.style` assertion to check that the `WordCard` component has the `correct` style.
+  - a `should` uses the `has.class` assertion to check that the `WordCard` component has the `correct` class.
   - a `should` checks that the `<span>` shows that there is 1 correct word.
 - The `describe` in `flashword.cy.js` contains a test for when the user completes the game by entering all words correctly.
   - This test is contained in its own `it` with a descriptive title.
@@ -46,11 +46,11 @@ description: Review Criteria for Extension 06 - Cypress
   - `find` is used to find the `text` element within each `WordCard` component.
   - `type` is used to type a word and the `{enter}` key into the `text` element.
   - a `should` checks that the completion message is visible and has the text "Great work, you have completed all the words!".
-  - a `should` uses the `has.style` assertion to check that each `WordCard` component has the `correct` style.
+  - a `should` uses the `has.class` assertion to check that each `WordCard` component has the `correct` class.
 - The `script` and `template` in `App.vue` implement a reset feature.
   - A reset button appears on in the game.
   - Clicking the reset button clears the `text` inputs in all of the `WordCard` components.
-  - Clicking the reset button removes the `correct` style from all of the `WordCard` components.
+  - Clicking the reset button removes the `correct` class from all of the `WordCard` components.
   - Clicking the reset button displays the message indicating that 0 of the words are correct.
   - Clicking the reset button hides the message that the game is complete.
 - The `describe` in `flashword.cy.js` contains a test for the reset feature.
@@ -63,7 +63,7 @@ description: Review Criteria for Extension 06 - Cypress
   - a `should` checks that the `<span>` element for the `correctCount` contains 0.
   - a `should` checks that the completion message does not exist.
   - a `should` checks that any typed words have been cleared from their `WordCard` components.
-  - a `should` checks that any `WordCard` that was used does not have the `correct` style.
+  - a `should` checks that any `WordCard` that was used does not have the `correct` class.
 
 ## AI Reflection
 
