@@ -48,7 +48,7 @@ description: Review Criteria for Extension 06 - Cypress
   - `find` is used to find the `text` element within each `WordCard` component.
   - `type` is used to type a word and the `{enter}` key into the `text` element.
   - a `should` checks that the completion message is visible and has the text "Great work, you have completed all the words!".
-  - a `should` uses the `has.class` assertion to check that each `WordCard` component has the `correct` class.
+  - a `should` checks that the message showing the number of correct words does not exit.
 - The `script` and `template` in `App.vue` implement a reset feature.
   - A reset button appears on in the game.
   - Clicking the reset button clears the `text` inputs in all of the `WordCard` components.
