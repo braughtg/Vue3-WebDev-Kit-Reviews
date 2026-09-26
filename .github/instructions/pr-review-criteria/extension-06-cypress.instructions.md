@@ -22,13 +22,13 @@ description: Review Criteria for Extension 06 - Cypress
   - This test is contained in its own `it` with a descriptive title.
   - The `it` uses the `data-cy` attribute to `get` the `WordCard` component element.
   - `find` is used to find the `text` element within the `WordCard` component.
-  - `type` is used to type a word into the `text` element followed by the `{enter}` key.
+  - `type` is used to type a word into the `text` element.
   - The `should` uses the `have.value` assertion to check that the `text` element has the correct value.
 - The `it` for "Check initial page state" in `flashword.cy.js` makes the test for the 0/3 words completed less brittle.
   - The display of `{{ correctCount }}` in `App.vue` is surrounded with a `<span>` with a `data-cy` attribute with a meaningful value.
   - The display of `{{ wordCount }}` is `App.vue` is surrounded with a `<span>` with a `data-cy` attribute with a meaningful value.
   - The `it` uses the `data-cy` attributes to `get` the `<span>` elements.
-  - The `should` checks that the `<span>` element for the `correctCount` contains 1.
+  - The `should` checks that the `<span>` element for the `correctCount` contains 0.
   - The `should` checks that the `<span>` element for the `wordCount` contains 3.
 
 ## Extensions with AI
