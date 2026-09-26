@@ -77,6 +77,10 @@ describe('FlashWord Tests', () => {
       .find('[data-cy="correct-answer"]')
       .should('have.text', 'hello');
 
+    cy.get('[data-cy="hola-card"]')
+      .find('[data-cy="translation"]')
+      .should('not.exist');
+
     cy.get('[data-cy="num-correct"]').should('have.text', '1');
   });
 
