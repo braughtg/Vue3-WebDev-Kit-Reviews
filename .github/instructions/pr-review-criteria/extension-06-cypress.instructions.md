@@ -39,6 +39,8 @@ description: Review Criteria for Extension 06 - Cypress
   - `find` is used to find the `text` element within the `WordCard` component.
   - `type` is used to type a word and the `{enter}` key into the `text` element.
   - a `should` uses the `has.class` assertion to check that the `WordCard` component has the `correct` class.
+  - a `should` checks that the `WordCard` component displays the correct translation.
+  - a `should` checks that the `WordCard` does not display the `text` input.
   - a `should` checks that the `<span>` shows that there is 1 correct word.
 - The `describe` in `flashword.cy.js` contains a test for when the user completes the game by entering all words correctly.
   - This test is contained in its own `it` with a descriptive title.
