@@ -510,11 +510,7 @@ Working on the extension tasks is very similar to working on the tutorial tasks.
 
    </details>
 
-1. <a id="check-pull-request-changes"></a>
-   <details>
-   <summary>Verify that your pull request contains the desired changes.</summary>
-
-   Visit this page for instructions on how to [view the changes in your pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests).
+<p/>
 
 ### Completing an Extension
 
@@ -526,7 +522,7 @@ Working on the extension tasks is very similar to working on the tutorial tasks.
 
    </details>
 
-<p/>
+   Visit this page for instructions on how to [mark a pull request as ready for review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#marking-a-pull-request-as-ready-for-review).
 
 2. <a id="mark-pull-request-ready"></a>
    <details>
