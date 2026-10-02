@@ -83,6 +83,14 @@ The following are the main activities that you will need to do when working on t
 
 ## Miscellaneous
 
+### Cypress
+
+- [Cypress Reference](CypressReference.md)
+- [Official Cypress Documentation](https://docs.cypress.io/)
+  - [Assertions](https://docs.cypress.io/app/references/assertions)
+  - [Actionability](https://docs.cypress.io/app/core-concepts/interacting-with-elements#Actionability)
+  - [Commands](https://docs.cypress.io/api/commands)
+
 ### GitHub Copilot
 
 - [Copilot Configuration](CopilotConfig.md)
