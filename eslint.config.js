@@ -59,6 +59,19 @@ export default [
       'vue/html-self-closing': 'off',
       'vue/max-attributes-per-line': 'off',
       'vue/singleline-html-element-content-newline': 'off',
+      'vue/v-on-event-hyphenation': 'off',
+    },
+  },
+
+  // Configuration for the flashword-vite project Cypress tests
+  {
+    files: [
+      'web-projects/flashword-vite/**/*.cy.js',
+      'web-projects/flashword-vite/cypress.config.js',
+    ],
+    rules: {
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
     },
   },
 ];
