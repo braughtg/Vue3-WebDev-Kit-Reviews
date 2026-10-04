@@ -16,19 +16,22 @@ description: Review Criteria for Extension 07 - Vue Lifecycle Hooks and API Call
 
 - An error message is displayed and the game content is hidden if an API error occurs when fetching the words.
   - A flag property is added to the Vue `data`
-  - The flag property is initialized to false.
-  - The flag property is set to true in created if an API error occurs.
-  - <div> elements are used with v-if to show or hide the message and game elements based on the flag property.
+  - The flag `data` property is initialized to false.
+  - The flag `data` property is set to true in created if an API error occurs.
+  - <div> elements are used with `v-if` to show or hide the message and game elements based on the flag property.
 
 ## Testing Extensions with the "Agent" agent
 
 - `cypress/e2e/flashword.cy.js` contains a test for an http error.
+  - Uses an intercept to set an http status code outside of the 200-299 range.
   - The test checks that the game content is hidden.
   - The test checks that the error message is shown.
 - `cypress/e2e/flashword.cy.js` contains a test for a network error.
+  - uses an intercept to force a network error.
   - The test checks that the game content is hidden.
   - The test checks that the error message is shown.
 - `cypress/e2e/flashword.cy.js` contains a test for a json parsing error.
+  - uses an intercept to return a response body with invalid json content.
   - The test checks that the game content is hidden.
   - The test checks that the error message is shown.
 
@@ -36,11 +39,10 @@ description: Review Criteria for Extension 07 - Vue Lifecycle Hooks and API Call
 
 Extensions with the "Plan" Agent
 
-- The FlashWord game in `App.vue` has a leaderboard function
-  - The leaderboard displays the users names and the times it took them to complete the game.
-  - A user can enter their name and time when they complete the game.
+- The FlashWord game in `App.vue` has a leaderboard that displays the users' names and the time it took them to complete the game.
 - The names and times on the leaderboard are fetched from the `api/times` endpoint.
-- When a user enters their name and time the data is POST ed to the `api/times` endpoint.
+- When a user completes the game they are able to enter their name.
+- The user's name and the time they took to complete the game are written to the `api/times` endpoint using a POST operation.
 
 ## AI Reflection
 
