@@ -516,7 +516,7 @@ Working on the extension tasks is very similar to working on the tutorial tasks.
 
    Visit this page for instructions on how to [view the changes in your pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests).
 
-### Completing an Extension
+   Running the commands below in the terminal are one way to do this.
 
 1. <a id="check-pull-request-changes"></a>
    <details>
