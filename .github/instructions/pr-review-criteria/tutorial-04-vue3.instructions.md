@@ -1,5 +1,5 @@
 ---
-applyTo: 'web-projects/flashword/**/*'
+applyTo: 'web-projects/flashword/**/*,web-projects/flashword-vite/src/App.vue'
 description: Review Criteria for Tutorial 04 - Vue 3
 ---
 
