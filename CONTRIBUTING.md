@@ -479,6 +479,7 @@ Working on the extension tasks is very similar to working on the tutorial tasks.
 
 <p/>
 
+<!--
 5. <a id="log-copilot-chat"></a>
    <details>
    <summary>Log your Copilot chat (if you used AI).</summary>
@@ -493,6 +494,7 @@ Working on the extension tasks is very similar to working on the tutorial tasks.
    </details>
 
 <p/>
+-->
 
 6. <a id="push-feature-branch"></a>
    <details>
@@ -508,7 +510,7 @@ Working on the extension tasks is very similar to working on the tutorial tasks.
 
    </details>
 
-<p/>
+   Pushing your feature branch to GitHub **automatically updates your pull request for the branch.**
 
 ### Completing an Extension
 
