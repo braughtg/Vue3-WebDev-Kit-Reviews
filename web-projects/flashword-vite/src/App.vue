@@ -7,29 +7,7 @@ export default {
   },
   data() {
     return {
-      words: [
-        {
-          word_a: 'hola',
-          word_b: 'hello',
-          hint: 'greeting',
-          answer: '',
-          correct: false,
-        },
-        {
-          word_a: 'uno',
-          word_b: 'one',
-          hint: 'number',
-          answer: '',
-          correct: false,
-        },
-        {
-          word_a: 'gris',
-          word_b: 'grey',
-          hint: 'color',
-          answer: '',
-          correct: false,
-        },
-      ],
+      words: [],
       correctCount: 0,
       completed: false,
     };
@@ -51,6 +29,17 @@ export default {
     incrementCorrectCount() {
       this.correctCount++;
     },
+  },
+  async created() {
+    try {
+      let response = await fetch('/api/words');
+      if (!response.ok) {
+        throw new Error('Server response not ok. Status: ' + response.status);
+      }
+      this.words = await response.json();
+    } catch (error) {
+      console.error('Error: Unable to fetch words. ', error);
+    }
   },
 };
 </script>
