@@ -7,7 +7,7 @@ export default {
       required: true,
     },
   },
-  emits: ['incrementCorrectCount'],
+  emits: ['incrementCorrectCount', 'incorrectAttempt'],
   data() {
     return {
       correct: false,
@@ -20,6 +20,8 @@ export default {
 
       if (this.correct) {
         this.$emit('incrementCorrectCount');
+      } else {
+        this.$emit('incorrectAttempt');
       }
     },
   },
