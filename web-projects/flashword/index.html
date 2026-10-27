@@ -6,49 +6,36 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="app.js" defer></script>
-
-    <style>
-      label {
-        display: block;
-      }
-
-      input,
-      button {
-        display: block;
-        margin: 10px 0px;
-      }
-
-      .correct {
-        color: green;
-      }
-
-      .incorrect {
-        color: red;
-      }
-
-      [v-cloak] {
-        display: none;
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
-    <h1>FlashWord</h1>
-
     <div id="app" v-cloak>
-      What is the English translation of the word <strong>{{ wordA }}</strong>?
+      <h1>FlashWord</h1>
 
-      <input type="text" v-model="answer" />
+      <p v-if="completed" id="completed">
+        Good work, you have completed all the words!
+      </p>
+      <p v-else id="correctCount">
+        You have answered {{ correctCount }} out of {{ wordCount }}
+      </p>
 
-      <p v-if="answer != ''">You answered: {{ answer }}</p>
-
-      <button v-on:click="checkAnswer()">Check answer</button>
-
-      <template v-if="showFeedback">
-        <p v-if="correct" class="correct">You got it!</p>
-        <p v-else class="incorrect">Sorry, please try again.</p>
-        <button v-on:click="reset()">Reset</button>
-      </template>
+      <div id="cards">
+        <div
+          class="card"
+          v-for="word in shuffledWords"
+          v-bind:class="{correct: word.correct}"
+        >
+          <p class="word">{{ word.word_a }}</p>
+          <input
+            type="text"
+            v-if="!word.correct"
+            v-model="word.answer"
+            v-on:keyup.enter="checkAnswer(word)"
+          />
+          <p v-else class="correctAnswer">{{ word.answer }}</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
