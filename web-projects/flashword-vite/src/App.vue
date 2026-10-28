@@ -32,6 +32,8 @@ export default {
       ],
       correctCount: 0,
       completed: false,
+      hasError: false,
+      loading: true,
     };
   },
   computed: {
@@ -60,14 +62,21 @@ export default {
       }
       this.words = await response.json();
     } catch (error) {
+      this.hasError = true;
       console.error('Error: Unable to fetch words. ', error);
+    } finally {
+      this.loading = false;
     }
   },
 };
 </script>
 
 <template>
-  <div id="app" v-cloak>
+  <div v-if="hasError">
+    <p>An Error Has Occurred. Please Come Back Later.</p>
+  </div>
+
+  <div id="app" v-cloak v-if="!hasError && !loading">
     <h1>FlashWord</h1>
 
     <p v-if="completed" id="completed">
