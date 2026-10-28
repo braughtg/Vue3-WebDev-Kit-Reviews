@@ -41,13 +41,14 @@ export default {
       this.words = await response.json();
     } catch (error) {
       console.error('Error: Unable to fetch words. ', error);
+      this.hasError = true;
     }
   },
 
   data() {
     return {
       words: [],
-
+      hasError: false,
       correctCount: 0,
       completed: false,
     };
@@ -75,24 +76,28 @@ export default {
 
 <template>
   <div id="app" v-cloak>
-    <h2 data-cy="app-header">FlashWord</h2>
+    <div v-if="hasError">There was an error when loading the words.</div>
 
-    <p v-if="completed" id="completed">
-      Great work, you have completed all the words!
-    </p>
-    <p v-else data-cy="correct-count" id="correctCount">
-      You have answered {{ correctCount }} out of {{ wordCount }}
-    </p>
+    <div v-else>
+      <h2 data-cy="app-header">FlashWord</h2>
 
-    <div id="cards">
-      <WordCard
-        v-for="word in shuffledWords"
-        v-bind:data-cy="word.word_a + '-card'"
-        v-bind:key="word.word_a"
-        v-bind:word="word"
-        v-on:incrementCorrectCount="incrementCorrectCount"
-      >
-      </WordCard>
+      <p v-if="completed" id="completed">
+        Great work, you have completed all the words!
+      </p>
+      <p v-else data-cy="correct-count" id="correctCount">
+        You have answered {{ correctCount }} out of {{ wordCount }}
+      </p>
+
+      <div id="cards">
+        <WordCard
+          v-for="word in shuffledWords"
+          v-bind:data-cy="word.word_a + '-card'"
+          v-bind:key="word.word_a"
+          v-bind:word="word"
+          v-on:incrementCorrectCount="incrementCorrectCount"
+        >
+        </WordCard>
+      </div>
     </div>
   </div>
 </template>

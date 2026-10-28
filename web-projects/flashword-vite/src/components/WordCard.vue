@@ -1,6 +1,7 @@
 <script>
 export default {
   name: 'WordCard',
+  hasError: false,
   props: {
     word: {
       type: Object,
@@ -12,6 +13,7 @@ export default {
     return {
       correct: false,
       answer: '',
+      hasError: false,
     };
   },
   methods: {
