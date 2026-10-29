@@ -7,20 +7,49 @@ export default {
       required: true,
     },
   },
-  emits: ['incrementCorrectCount'],
+  emits: ['attempt'],
   data() {
     return {
       correct: false,
       answer: '',
     };
   },
+  watch: {
+    word: {
+      immediate: true,
+      handler(nextWord) {
+        if (nextWord && nextWord.correct) {
+          this.correct = true;
+          this.answer = nextWord.answer || this.answer;
+        } else {
+          this.correct = false;
+        }
+      },
+    },
+  },
   methods: {
+    // AI-generated code: each submit reports the outcome back to the parent so the app can update the running score and lock solved cards.
     checkAnswer() {
-      this.correct = this.word.word_b === this.answer;
-
       if (this.correct) {
-        this.$emit('incrementCorrectCount');
+        return;
       }
+
+      const submittedAnswer = this.answer.trim();
+      const isCorrect =
+        this.word.word_b.trim().toLowerCase() === submittedAnswer.toLowerCase();
+      this.answer = submittedAnswer;
+
+      if (isCorrect) {
+        this.correct = true;
+      } else {
+        this.answer = '';
+      }
+
+      this.$emit('attempt', {
+        word: this.word,
+        isCorrect,
+        answer: submittedAnswer,
+      });
     },
   },
 };
@@ -30,9 +59,9 @@ export default {
   <div class="card" v-bind:class="{ correct: correct }">
     <p class="word">{{ word.word_a }}</p>
     <input
-      type="text"
       v-if="!correct"
       v-model="answer"
+      type="text"
       v-on:keyup.enter="checkAnswer()"
     />
     <p v-else class="correctAnswer">{{ answer }}</p>
